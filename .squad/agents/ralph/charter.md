@@ -12,7 +12,7 @@
 ## Project Context
 
 - **Owner:** DrDonoso
-- **Project:** Mundial2026Over9000 — Web app for a World Cup 2026 betting pool among friends
+- **Project:** Mundial2026Quiniela — Web app for a World Cup 2026 betting pool among friends
 - **Stack:** TBD frontend, backend with auth, PostgreSQL, Telegram bot, Docker, CI/CD
 
 ## What I Own

@@ -1,5 +1,5 @@
 # ============================================================
-# Mundial2026Over9000 — Frontend Dockerfile
+# Mundial2026Quiniela — Frontend Dockerfile
 # Multi-stage: build React app, serve with Nginx
 # ============================================================
 

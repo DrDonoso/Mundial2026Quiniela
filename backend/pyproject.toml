@@ -1,7 +1,7 @@
 [project]
-name = "mundial2026over9000-backend"
+name = "Mundial2026Quiniela-backend"
 version = "0.1.0"
-description = "Backend API for Mundial 2026 Over 9000 — World Cup betting pool"
+description = "Backend API for Mundial 2026 Quiniela — World Cup betting pool"
 requires-python = ">=3.12"
 license = "MIT"
 

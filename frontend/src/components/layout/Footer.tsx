@@ -6,7 +6,7 @@ export function Footer() {
       <div className="flex flex-col items-center gap-2 py-4 px-4 sm:flex-row sm:justify-between">
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <Trophy className="h-4 w-4 text-gold" />
-          <span>Mundial 2026 Over 9000</span>
+          <span>Mundial 2026 Quiniela</span>
         </div>
         <p className="text-xs text-muted-foreground/60">
           FIFA World Cup 2026 Betting Pool &middot; Made with passion

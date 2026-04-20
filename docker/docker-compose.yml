@@ -1,5 +1,5 @@
 # ============================================================
-# Mundial2026Over9000 — Production Compose (pre-built images)
+# Mundial2026Quiniela — Production Compose (pre-built images)
 # Usage: docker compose -f docker/docker-compose.run.yml up -d
 # ============================================================
 

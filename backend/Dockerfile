@@ -1,5 +1,5 @@
 # ============================================================
-# Mundial2026Over9000 — Backend Dockerfile
+# Mundial2026Quiniela — Backend Dockerfile
 # Multi-stage build for FastAPI + Uvicorn
 # ============================================================
 

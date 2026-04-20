@@ -1,6 +1,6 @@
 # Project Context
 
-- **Project:** Mundial2026Over9000
+- **Project:** Mundial2026Quiniela
 - **Created:** 2026-04-16
 
 ## Core Context

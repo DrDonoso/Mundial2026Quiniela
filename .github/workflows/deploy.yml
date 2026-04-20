@@ -1,5 +1,5 @@
 # ============================================================
-# Mundial2026Over9000 — Deploy Pipeline
+# Mundial2026Quiniela — Deploy Pipeline
 # Runs on: push of version tags (v*)
 # Builds and pushes Docker images to DockerHub
 # ============================================================

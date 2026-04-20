@@ -43,7 +43,7 @@ export default function LoginPage() {
           <h1 className="text-3xl font-bold text-gradient-gold mb-1">
             Mundial 2026
           </h1>
-          <p className="text-lg font-medium text-foreground/80">Over 9000</p>
+          <p className="text-lg font-medium text-foreground/80">Quiniela</p>
           <p className="text-sm text-muted-foreground mt-1">
             The ultimate World Cup betting pool
           </p>

@@ -1,7 +1,7 @@
-# ⚽ Mundial2026Over9000
+# ⚽ Mundial2026Quiniela
 
-[![CI](https://github.com/DrDonoso/Mundial2026Over9000/actions/workflows/ci.yml/badge.svg)](https://github.com/DrDonoso/Mundial2026Over9000/actions/workflows/ci.yml)
-[![Deploy](https://github.com/DrDonoso/Mundial2026Over9000/actions/workflows/deploy.yml/badge.svg)](https://github.com/DrDonoso/Mundial2026Over9000/actions/workflows/deploy.yml)
+[![CI](https://github.com/DrDonoso/Mundial2026Quiniela/actions/workflows/ci.yml/badge.svg)](https://github.com/DrDonoso/Mundial2026Quiniela/actions/workflows/ci.yml)
+[![Deploy](https://github.com/DrDonoso/Mundial2026Quiniela/actions/workflows/deploy.yml/badge.svg)](https://github.com/DrDonoso/Mundial2026Quiniela/actions/workflows/deploy.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue?logo=docker)](docker/docker-compose.run.yml)
 
@@ -34,8 +34,8 @@ Predict the champion, group stage outcomes, and knockout results. Compete on a l
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/DrDonoso/Mundial2026Over9000.git
-cd Mundial2026Over9000
+git clone https://github.com/DrDonoso/Mundial2026Quiniela.git
+cd Mundial2026Quiniela
 
 # 2. Create your environment file
 cp docker/.env.example docker/.env
@@ -55,8 +55,8 @@ Open **http://localhost** and you're in. 🎉
 
 ```bash
 # 1. Clone and set up env
-git clone https://github.com/DrDonoso/Mundial2026Over9000.git
-cd Mundial2026Over9000
+git clone https://github.com/DrDonoso/Mundial2026Quiniela.git
+cd Mundial2026Quiniela
 cp .env.example .env
 # Edit .env with your values
 

@@ -1,5 +1,5 @@
 """
-Scoring engine for Mundial 2026 Over 9000.
+Scoring engine for Mundial 2026 Quiniela.
 
 Single source of truth for all scoring logic.
 Max theoretical score: 424 points.

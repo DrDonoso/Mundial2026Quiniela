@@ -32,7 +32,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="Mundial 2026 Over 9000",
+    title="Mundial 2026 Quiniela",
     description="World Cup 2026 betting pool API",
     version="0.1.0",
     lifespan=lifespan,
