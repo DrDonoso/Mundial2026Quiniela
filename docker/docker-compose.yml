@@ -1,0 +1,60 @@
+# ============================================================
+# Mundial2026Over9000 — Production Compose (pre-built images)
+# Usage: docker compose -f docker/docker-compose.run.yml up -d
+# ============================================================
+
+services:
+  # ── Database ──────────────────────────────────────────────
+  db:
+    image: postgres:16-alpine
+    container_name: mundial-db
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-mundial}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme}
+      POSTGRES_DB: ${POSTGRES_DB:-mundial2026}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-mundial} -d ${POSTGRES_DB:-mundial2026}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - mundial-net
+    restart: unless-stopped
+
+  # ── Backend ───────────────────────────────────────────────
+  backend:
+    image: drdonoso/mundial-backend:latest
+    container_name: mundial-backend
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    networks:
+      - mundial-net
+    restart: unless-stopped
+
+  # ── Frontend (Nginx serving built SPA) ────────────────────
+  frontend:
+    image: drdonoso/mundial-frontend:latest
+    container_name: mundial-frontend
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+    networks:
+      - mundial-net
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+    driver: local
+
+networks:
+  mundial-net:
+    driver: bridge

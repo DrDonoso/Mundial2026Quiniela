@@ -21,3 +21,16 @@
 - **Alembic:** Async-compatible env.py, script.mako template, empty versions dir
 - **Security:** CORS from env, slowapi rate limiting, all Pydantic-validated inputs, parameterized queries only
 - Prediction lock logic: pre-tournament locks 1h before first match, groups lock 1h before first match of that group, knockout locks 1h before each match
+
+### 2026-04-20 — SSL Verify Toggle for Football API Client
+- Added `FOOTBALL_API_VERIFY_SSL` bool setting (default `True`) to `config.py`
+- Passed it as `verify=` param to `httpx.AsyncClient` in `football_api.py`
+- Set to `false` in `.env` to bypass corporate proxy self-signed cert errors in Docker
+- This is a runtime config toggle, not a code-level security bypass — production can keep it `True` if the network is clean
+
+### 2026-04-20 — Admin Invite & Register Schema Fix
+- `InviteListItem` must include `token` (preview from hash), `created_by_username`, `used_by_username` — frontend crashes without these
+- `InviteCreateResponse` must return the full shape the frontend expects, not just `{id, token, expires_at}`
+- `create_invite` must accept `InviteCreateRequest` body with `expires_in_days` — frontend sends this
+- `POST /auth/register` must return `TokenResponse` not `UserResponse` — otherwise new users can't authenticate after registration
+- Always use `selectinload` when the response schema needs fields from related models (avoids lazy-load issues in async)
